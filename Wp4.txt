@@ -1,0 +1,69 @@
+4a
+<html>
+<head>
+  
+    <title>Document</title>
+    <script>
+        function checkusn(){
+            var str=document.getElementById('usn').value;
+            var usno=/^[1-4]{1}[A-Z]{2}\d{2}[A-Z]{2}\d{3}$/;
+            var rest=str.match(usno);
+            if(rest==null)
+                alert("invalid usn")
+            else
+                alert("valid usn");
+            }   
+    </script>
+</head>
+<body>
+    <h2 align="center" style="color:red;">Validate usn</h2>
+    <hr><br><br>
+    <form action="">
+        <label for=""><h2>Enter USN:</h2>
+        <input type="text" id="usn" size="20"></label>
+        <input type="button" value="validate" onclick="checkusn()">
+    </form>
+</body>
+</html>
+4b
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USN and Semester Validation</title>
+    <script>
+        function checkusn(){
+            var str = document.getElementById('usn').value;
+            var usno = /^[1-4]{1}[A-Z]{2}\d{2}[A-Z]{2}\d{3}$/;
+            var rest = str.match(usno);
+            if(rest == null)
+                alert("Invalid USN");
+            else
+                alert("Valid USN");
+        }
+
+        function validsem(){
+            var sem = document.getElementById('sem').value;
+            var s1 = /^[1-8]$/;
+            var result = sem.match(s1);
+            if(result == null)
+                alert("Invalid Semester");
+            else
+                alert("Valid Semester");
+        }
+    </script>
+</head>
+<body>
+    <h2 align="center" style="color:red;">Validate USN and Semester</h2>
+    <hr><br><br>
+    <form action="">
+        <label><h2>Enter USN:</h2>
+        <input type="text" id="usn" size="12"></label><br><br>
+        <label><h2>Semester</h2>
+            <input type="text" id="sem" size="5"></label><br><br>
+        <input type="button" value="Validate USN" onclick="checkusn()">
+        <input type="button" value="Validate Semester" onclick="validsem()">
+    </form>
+</body>
+</html>
